@@ -13,8 +13,7 @@ def hello_world():
 def test_post():
     input_json = request.get_json(force=True)
     response = {'text': input_json['text']}
-    # return jsonify(response)
-    return '', 204
+    return response, 204
 
 
 app.run(port=5000)
